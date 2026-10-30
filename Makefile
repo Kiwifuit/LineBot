@@ -1,0 +1,26 @@
+CC = avr-gcc
+CFLAGS ?= -Os -Wall -Werror
+BUILDDIR ?= build
+TARGET = linbot
+ALL_SRC = main.c
+
+ALL_OBJ = $(patsubst %.c,$(BUILDDIR)/%.o,$(ALL_SRC))
+
+$(BUILDDIR)/$(TARGET).hex: $(BUILDDIR)/$(TARGET)
+	avr-objcopy -j .text -j .data -S -O ihex $< $@
+
+$(BUILDDIR)/$(TARGET): $(ALL_OBJ)
+	$(CC) $(CFLAGS) -o $@ $<
+
+$(BUILDDIR)/%.o: src/%.c | $(BUILDDIR)
+	$(CC) $(CFLAGS) -c -o $@ $^
+
+$(BUILDDIR):
+	mkdir -p $(BUILDDIR)
+
+.PHONY: clean
+clean:
+	@rm -rf $(BUILDDIR)
+
+flash: $(BUILDDIR)/$(TARGET).hex
+	avrdude -c usbasp -p m328p -U flash:w:$<:i
