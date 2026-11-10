@@ -2,7 +2,7 @@ CC = avr-gcc
 CFLAGS ?= -Os -Wall -Werror
 BUILDDIR ?= build
 TARGET = linbot
-ALL_SRC = main.c
+ALL_SRC = main.c sketch.c
 
 ALL_OBJ = $(patsubst %.c,$(BUILDDIR)/%.o,$(ALL_SRC))
 
