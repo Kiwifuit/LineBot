@@ -11,4 +11,4 @@
 
 ## Nano Pinout
 
-![Arduino Nano pinout](https://cdn.shopify.com/s/files/1/0559/1970/6265/files/1_ac7b34a1-442d-48fd-b941-81a930454b98.png?v=1754633935)
+![Arduino Nano pinout](./doc/pinout-nano.png)
