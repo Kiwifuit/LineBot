@@ -23,3 +23,19 @@ void motor_right();
 
 /// @brief Stops both motors
 void motor_stop();
+
+/// @brief Sets the speed of the motors
+/// @param speed Speed setting
+void set_motor_speed(uint8_t speed);
+
+/// @brief Sets the Motor PWM's prescaler value
+/// @param prescaler Prescaler value to set
+void set_motor_clk_prescaler(uint16_t prescaler);
+
+/// @brief Sets the motor speed from 0 - 255
+/// @param speed Motor speed
+void set_motor_speed(uint8_t speed);
+
+/// @brief Sets the Motor PWM's frequency
+/// @param frequency Frequency in Hz
+void set_motor_frequency(uint16_t frequency);
