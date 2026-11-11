@@ -1,5 +1,13 @@
 #include "sketch.h"
 
-void setup() {}
+#include "m328p.h"
 
-void loop() {}
+void setup()
+{
+  init();
+}
+
+void loop()
+{
+  motor_forward();
+}
