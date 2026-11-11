@@ -8,7 +8,7 @@
 #define F_CPU 16000000L
 #define FREQ(F_PWM) ((F_CPU) / (2 * PRESCALER * F_PWM))
 
-static uint8_t PRESCALER = 1;
+static uint16_t PRESCALER = 1;
 
 void init()
 {
