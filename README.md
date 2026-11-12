@@ -1,5 +1,19 @@
 # Line following bot Notes
 
+## Building
+
+### Requirements
+
+* `avrdude`
+* AVR toolchain `avr-gcc`, `avr-libc`, `avr-objcopy`, etc.
+* GNU Make
+
+To compile, run `make` to produce the ihex file of the program.
+`make flash` uses AVRDude to flash to the target chip using a USBASP
+device.
+
+On Windows systems using MSYS2, `mingw-make` is used over `make`.
+
 ## Pin assignments
 
 | Module | Function | Pin (m328p) | Physical Pin# (m328p) |
