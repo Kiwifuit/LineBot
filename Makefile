@@ -2,6 +2,7 @@ CC = avr-gcc
 CFLAGS ?= -Os -Wall -Werror -mmcu=atmega328p
 BUILDDIR ?= build
 TARGET = linbot
+AVRDUDE_ARGS ?= -c usbasp
 ALL_MOD = main sketch m328p
 
 ALL_OBJ = $(patsubst %,$(BUILDDIR)/%.o,$(ALL_MOD))
@@ -23,4 +24,4 @@ clean:
 	@rm -rf $(BUILDDIR)
 
 flash: $(BUILDDIR)/$(TARGET).hex
-	avrdude -c usbasp -p m328p -U flash:w:$<:i
+	avrdude -p m328p $(AVRDUDE_ARGS) -U flash:w:$<:i
