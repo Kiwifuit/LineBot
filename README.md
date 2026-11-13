@@ -12,7 +12,16 @@ To compile, run `make` to produce the ihex file of the program.
 `make flash` uses AVRDude to flash to the target chip using a USBASP
 device.
 
-On Windows systems using MSYS2, `mingw-make` is used over `make`.
+On Windows systems using MSYS2, `mingw32-make` is used over `make`.
+
+### Programming without an usbasp
+
+Override the `AVRDUDE_ARGS` variable to include `-c arduino`. Below is an
+example for programming on windows
+
+```sh
+mingw32-make flash AVRDUDE_ARGS="-c arduino -P ch340"
+```
 
 ## Pin assignments
 
