@@ -35,3 +35,24 @@ mingw32-make flash AVRDUDE_ARGS="-c arduino -P ch340"
 ## Microcontroller Pinout
 
 ![Atmega328p](./doc/atmega328p-pinout.gif)
+
+## Customization
+
+The project primarily targets the ATMega328P, commonly found in
+the Arduino Nano and Uno. This, alongside other options, can be
+modified upon invoking `make` or `mingw32-make`:
+
+* `MCU`: The microcontroller to reference. `avr-gcc` and `avrdude`
+  use this option. Modify this option on different microcontrollers other than recommended
+* `PROGRAMMER`: The use of a USBasp is recommended, but other
+  programmers can be used through this variable
+* `FLASHER_EXTRA`: Extra arguments to pass to `avrdude`
+
+Note that the clock speed which this firmware may use is
+hardcoded to 8 MHz, and the fuse bytes are hardcoded to
+reflect the use of the internal 8 MHz RC Oscillator.
+This can be changed by modifying `Makefile` and `main.c`
+directly
+
+Other recipes such as `fuses` and `erase` may not work on other
+programmers.
