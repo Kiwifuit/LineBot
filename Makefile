@@ -2,8 +2,9 @@ CC = avr-gcc
 CFLAGS ?= -Os -Wall -Werror -mmcu=atmega328p
 BUILDDIR ?= build
 TARGET = linbot
+
 AVRDUDE_ARGS ?= -c usbasp
-ALL_MOD = main sketch m328p
+ALL_MOD = main
 
 ALL_OBJ = $(patsubst %,$(BUILDDIR)/%.o,$(ALL_MOD))
 
