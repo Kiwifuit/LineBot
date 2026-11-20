@@ -56,3 +56,10 @@ directly
 
 Other recipes such as `fuses` and `erase` may not work on other
 programmers.
+
+## Notes
+
+The firmware in this repository is **NOT** recommended for boards
+equipped with bootloaders which require the UART interface, as it
+completely uses Port D for IR Sensors. To modify this behavior,
+see `ir.c`
