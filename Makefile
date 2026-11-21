@@ -4,7 +4,6 @@ CFLAGS ?= -Os -Wall -Werror -mmcu=$(MCU) -DF_CPU=8000000000L
 BUILDDIR ?= build
 TARGET = linbot
 
-AVRDUDE_ARGS ?= -c usbasp
 ALL_MOD = main ir pid state
 
 PROGRAMMER ?= usbasp
