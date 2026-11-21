@@ -5,7 +5,7 @@ BUILDDIR ?= build
 TARGET = linbot
 
 AVRDUDE_ARGS ?= -c usbasp
-ALL_MOD = main ir
+ALL_MOD = main ir pid
 
 PROGRAMMER ?= usbasp
 FLASHER_ARGS = -c $(PROGRAMMER) -p $(MCU) $(FLASHER_EXTRA)
