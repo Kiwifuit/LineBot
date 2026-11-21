@@ -10,14 +10,14 @@
 
 static const int8_t WEIGHTS[8] = {-7, -5, -3, -1, 1, 3, 5, 7};
 
-void init_pid(pid_t *pid_state)
+void init_pid(pid_state_t *pid_state)
 {
   pid_state->integral = 0;
   pid_state->pid_prev_err = 0;
   pid_state->sensor_last_err = 0;
 }
 
-int8_t compute_ir_error(uint8_t ir_sensor, pid_t *pid_state)
+int8_t compute_ir_error(uint8_t ir_sensor, pid_state_t *pid_state)
 {
   int16_t sum = 0;
   uint8_t count = 0;
@@ -39,7 +39,7 @@ int8_t compute_ir_error(uint8_t ir_sensor, pid_t *pid_state)
   return pid_state->sensor_last_err;
 }
 
-int16_t update_pid(pid_t *pid_state, const lb_state_t *gains, int8_t error)
+int16_t update_pid(pid_state_t *pid_state, const lb_state_t *gains, int8_t error)
 {
   int32_t p = gains->kp * error;
 
