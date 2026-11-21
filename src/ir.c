@@ -6,6 +6,7 @@
 #include <avr/interrupt.h>
 #include <stdint.h>
 
+// TODO: Move these to a global configuration struct
 static uint8_t MASK = 0;
 
 void init_sensors()
