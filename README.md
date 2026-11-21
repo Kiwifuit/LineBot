@@ -27,7 +27,8 @@ mingw32-make flash AVRDUDE_ARGS="-c arduino -P ch340"
 
 | Module | Function | Pin (m328p) | Physical Pin# (m328p) |
 | ------ | -------- | ----------- | ------------- |
-| Motor Driver | PWM | PB1 | 15 |
+| Motor Driver | PWMA | PB1 | 15 |
+| Motor Driver | PWMB | PB2 | 16 |
 | Motor Driver | Direction | PC[0..3] | 23 to 26 |
 | Motor Driver | Standby | PC4 | 27 |
 | IR Array | Array Input | PD[0..7]* | 2 to 6, 11 to 13 |
