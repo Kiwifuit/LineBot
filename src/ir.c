@@ -6,14 +6,12 @@
 #include <avr/interrupt.h>
 #include <stdint.h>
 
-#define IR_PIN_MASK 0b11111111
-
 static uint8_t MASK = 0;
 
 void init_sensors()
 {
   // Ensure all pins on Port D are inputs
-  DDRD = ~IR_PIN_MASK;
+  DDRD = 0;
 }
 
 uint8_t read_sensors()

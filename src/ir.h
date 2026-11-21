@@ -1,6 +1,8 @@
 #ifndef _LB_IR
 #define _LB_IR
 
+#include <stdint.h>
+
 /// @brief Initializes Port D (PD0..PD7) for use in the 8-bit IR
 //         sensor
 void init_sensors();
