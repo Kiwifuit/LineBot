@@ -1,18 +1,6 @@
 {
   "configurations": [
     {
-      "name": "Linux",
-      "includePath": [
-        "${workspaceFolder}/**"
-      ],
-      "defines": [],
-      "compilerPath": "/usr/bin/gcc",
-      "cStandard": "gnu23",
-      "cppStandard": "gnu++17",
-      "intelliSenseMode": "linux-gcc-x64",
-      "configurationProvider": "ms-vscode.makefile-tools"
-    },
-    {
       "name": "AVR-linux",
       "includePath": [
         "${workspaceFolder}/**",
@@ -22,7 +10,7 @@
         "__AVR_ATmega328P__"
       ],
       "compilerPath": "/usr/bin/avr-gcc",
-      "cStandard": "gnu23",
+      "cStandard": "gnu17",
       "cppStandard": "gnu++17",
       "intelliSenseMode": "linux-gcc-x64",
       "compilerArgs": [
@@ -39,7 +27,7 @@
         "__AVR_ATmega328P__"
       ],
       "compilerPath": "C:\\msys64\\ucrt64\\bin\\avr-gcc.exe",
-      "cStandard": "gnu23",
+      "cStandard": "gnu17",
       "cppStandard": "gnu++17",
       "intelliSenseMode": "linux-gcc-x64",
       "compilerArgs": [
